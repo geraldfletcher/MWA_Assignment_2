@@ -1,0 +1,34 @@
+<!--*************************************
+|Gerald Fletcher                        |
+|C06414401                              |
+|Webelevate 3.0                         |
+|Mobile Web Applications                |
+|Mobile Web Applications Assignment 2   |
+|Due Date: 2014/4/14                    |
+**************************************-->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.GeraldFletcher.ToDoApp"
+        version   = "1.0.0">
+
+    <name>My ToDo App</name><!--App name-->
+
+    <description><!--description of app-->
+        A ToDo list app that I created.
+    </description>
+
+    <author href="#" email="gerald.fletcher@webelevate.ie">
+        Gerald Fletcher
+    </author>
+
+    <content src="index.html" /><!--link to the index.html file-->
+
+    <preference name="fullscreen"                 value="true" />
+
+    <icon src="images/checked_box_icon.png" /><!--icon image for home screen icon-->
+
+    <access origin="*"/>
+
+</widget>

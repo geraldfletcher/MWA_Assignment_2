@@ -1,0 +1,46 @@
+<!--*************************************
+|Gerald Fletcher                        |
+|C06414401                              |
+|Webelevate 3.0                         |
+|Mobile Web Applications                |
+|Mobile Web Applications Assignment 2   |
+|Due Date: 2014/4/14                    |
+***************************************-->
+<!DOCTYPE html>
+<html data-ng-app="">
+    <head>
+        <meta charset="utf-8" />
+        <!--All included css and js files-->
+        <link rel="stylesheet" type="text/css" href="css/ToDo.css" />
+        <script type="text/javascript" src="js/angular.js"></script>
+        <script type="text/javascript" src="js/toDoListController.js"></script>
+        <script type="text/javascript" src="phonegap.js"></script>
+
+        <title>My ToDo List App</title> <!--Title on the desktop browser-->
+
+    </head>
+    <body>
+        <div class="bar bar-header bar-light">
+        <h2 class="title">My ToDo List App</h2> <!--Title for the app on the device screen-->
+        </div>
+
+        <div class="container" data-ng-controller="ToDoController">
+
+            <!--Input for the todo list items-->
+            ToDo: <input type="text"  data-ng-model="newItem.name" /> 
+            <br/>
+            Requirements: <input type="text" data-ng-model="newItem.description" /> 
+            <br/>
+            <button data-ng-click="addItemToDo()">Get Busy Doing!!</button> <!--button to add item to the list-->
+
+
+        <ul> <!--Show the list in the browser-->
+            <li data-ng-repeat="nextToDo in toDoListItems">
+                {{nextToDo.name}} : {{nextToDo.description}}
+                <button href="" ng-click="delete($index)">Done!</button> <!--delete button-->
+            </li>
+        </ul>
+
+        </div>
+    </body>
+</html>
